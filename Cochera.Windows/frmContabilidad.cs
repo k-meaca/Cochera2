@@ -177,7 +177,7 @@ namespace Cochera.Windows
 
         private void btnFiltrarPorAbonado_Click(object sender, EventArgs e)
         {
-            FiltrarPorDescripcion("ABONADO");
+            FiltrarPorDescripcion("CUENTA CORRIENTE");
         }
 
         private void btnFiltrarAuto_Click(object sender, EventArgs e)
@@ -212,7 +212,7 @@ namespace Cochera.Windows
 
         private void btnFiltrarDebito_Click(object sender, EventArgs e)
         {
-            FiltrarPorMedioDePago("DEBITO AUTOMATICO");
+            FiltrarPorMedioDePago("DEBITO");
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
