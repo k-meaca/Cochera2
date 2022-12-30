@@ -15,6 +15,14 @@ namespace Cochera.Windows.Utilidades
 
         //----PRIVADOS----//
 
+        private static bool ValidarPatenteVieja(string patente)
+        {
+            string letrasPatente = patente.Substring(0, 3);
+            string numerosPatente = patente.Substring(3);
+
+            return SoloTexto(letrasPatente) && SoloNumeros(numerosPatente);
+        }
+
         //----PUBLICOS----//
         public static bool LetraLoginValida(char letra)
         {
@@ -55,6 +63,21 @@ namespace Cochera.Windows.Utilidades
             return false;
         }
 
+        public static bool SoloNumeros(string numeros)
+        {
+            bool soloNumeros = true;
+
+            foreach(char numero in numeros)
+            {
+                if (!Char.IsDigit(numero)) 
+                {
+                    soloNumeros = false;
+                }
+            }
+
+            return soloNumeros;
+        }
+
         public static bool SoloTexto(char letra)
         {
             if (Char.IsLetter(letra) || Char.IsControl(letra) || Char.IsWhiteSpace(letra))
@@ -63,6 +86,21 @@ namespace Cochera.Windows.Utilidades
             }
 
             return false;
+        }
+
+        public static bool SoloTexto(string letras)
+        {
+            bool soloLetras = true;
+
+            foreach(char letra in letras)
+            {
+                if (!Char.IsLetter(letra))
+                {
+                    soloLetras = false;
+                }
+            }
+
+            return soloLetras;
         }
 
         public static bool NumerosYLetras(char letra)
@@ -74,6 +112,47 @@ namespace Cochera.Windows.Utilidades
 
             return false;
         }
+
+        public static bool ValidarPatenteAuto(string patente)
+        {
+            
+            if(patente.Length == 6)
+            {
+                return ValidarPatenteVieja(patente);
+            }
+            else if(patente.Length == 7)
+            {
+                string letrasDelanteras = patente.Substring(0, 2);
+                string numerosPatente = patente.Substring(2, 3);
+                string letrasTraseras = patente.Substring(5);
+
+                return SoloTexto(letrasDelanteras) && SoloNumeros(numerosPatente) && SoloTexto(letrasTraseras);
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool ValidarPatenteMoto(string patente)
+        {
+            if(patente.Length == 6)
+            {
+                return ValidarPatenteVieja(patente);
+            }
+            else if(patente.Length == 7)
+            {
+                string letrasPatente = patente.Substring(0, 3);
+                string numerosPatente = patente.Substring(3);
+
+                return SoloTexto(letrasPatente) && SoloNumeros(numerosPatente);
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 
         public static bool ValidarIngreso(string patente)
         {

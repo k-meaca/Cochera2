@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.Vehiculo = new System.Windows.Forms.Label();
             this.cmboxTipoVehiculo = new System.Windows.Forms.ComboBox();
-            this.lblPatente = new System.Windows.Forms.Label();
             this.txtPatente = new System.Windows.Forms.TextBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.pnlClientes = new System.Windows.Forms.Panel();
@@ -70,6 +69,7 @@
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.checkAbonar = new System.Windows.Forms.CheckBox();
             this.mostradorErrores = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblPatente = new System.Windows.Forms.Label();
             this.pnlClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosClientes)).BeginInit();
             this.pnlBotonCliente.SuspendLayout();
@@ -110,7 +110,7 @@
             // 
             this.Vehiculo.AutoSize = true;
             this.Vehiculo.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vehiculo.Location = new System.Drawing.Point(21, 63);
+            this.Vehiculo.Location = new System.Drawing.Point(20, 63);
             this.Vehiculo.Name = "Vehiculo";
             this.Vehiculo.Size = new System.Drawing.Size(63, 18);
             this.Vehiculo.TabIndex = 2;
@@ -121,26 +121,17 @@
             this.cmboxTipoVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmboxTipoVehiculo.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmboxTipoVehiculo.FormattingEnabled = true;
-            this.cmboxTipoVehiculo.Location = new System.Drawing.Point(24, 87);
+            this.cmboxTipoVehiculo.Location = new System.Drawing.Point(23, 87);
             this.cmboxTipoVehiculo.Name = "cmboxTipoVehiculo";
             this.cmboxTipoVehiculo.Size = new System.Drawing.Size(162, 26);
             this.cmboxTipoVehiculo.TabIndex = 0;
             this.cmboxTipoVehiculo.SelectedValueChanged += new System.EventHandler(this.cmboxTipoVehiculo_SelectedValueChanged);
             // 
-            // lblPatente
-            // 
-            this.lblPatente.AutoSize = true;
-            this.lblPatente.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPatente.Location = new System.Drawing.Point(20, 121);
-            this.lblPatente.Name = "lblPatente";
-            this.lblPatente.Size = new System.Drawing.Size(59, 18);
-            this.lblPatente.TabIndex = 2;
-            this.lblPatente.Text = "Patente";
-            // 
             // txtPatente
             // 
             this.txtPatente.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPatente.Location = new System.Drawing.Point(24, 145);
+            this.txtPatente.Location = new System.Drawing.Point(23, 145);
+            this.txtPatente.MaxLength = 7;
             this.txtPatente.Name = "txtPatente";
             this.txtPatente.Size = new System.Drawing.Size(162, 26);
             this.txtPatente.TabIndex = 1;
@@ -172,14 +163,14 @@
             this.datosClientes.AllowUserToResizeColumns = false;
             this.datosClientes.AllowUserToResizeRows = false;
             this.datosClientes.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datosClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datosClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.datosClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datosClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCliente,
@@ -197,8 +188,8 @@
             // colCliente
             // 
             this.colCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colCliente.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colCliente.DefaultCellStyle = dataGridViewCellStyle8;
             this.colCliente.HeaderText = "Cliente";
             this.colCliente.Name = "colCliente";
             this.colCliente.ReadOnly = true;
@@ -206,8 +197,8 @@
             // colNumDoc
             // 
             this.colNumDoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colNumDoc.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNumDoc.DefaultCellStyle = dataGridViewCellStyle9;
             this.colNumDoc.HeaderText = "Nro de Doc.";
             this.colNumDoc.Name = "colNumDoc";
             this.colNumDoc.ReadOnly = true;
@@ -249,7 +240,7 @@
             // 
             this.lblEstacionamiento.AutoSize = true;
             this.lblEstacionamiento.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstacionamiento.Location = new System.Drawing.Point(21, 184);
+            this.lblEstacionamiento.Location = new System.Drawing.Point(20, 184);
             this.lblEstacionamiento.Name = "lblEstacionamiento";
             this.lblEstacionamiento.Size = new System.Drawing.Size(119, 18);
             this.lblEstacionamiento.TabIndex = 2;
@@ -259,7 +250,7 @@
             // 
             this.txtEstacionamiento.Enabled = false;
             this.txtEstacionamiento.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstacionamiento.Location = new System.Drawing.Point(24, 208);
+            this.txtEstacionamiento.Location = new System.Drawing.Point(23, 208);
             this.txtEstacionamiento.Name = "txtEstacionamiento";
             this.txtEstacionamiento.Size = new System.Drawing.Size(162, 26);
             this.txtEstacionamiento.TabIndex = 4;
@@ -339,7 +330,7 @@
             // 
             this.lblIngreso.AutoSize = true;
             this.lblIngreso.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngreso.Location = new System.Drawing.Point(21, 241);
+            this.lblIngreso.Location = new System.Drawing.Point(20, 241);
             this.lblIngreso.Name = "lblIngreso";
             this.lblIngreso.Size = new System.Drawing.Size(58, 18);
             this.lblIngreso.TabIndex = 2;
@@ -349,7 +340,7 @@
             // 
             this.txtIngreso.Enabled = false;
             this.txtIngreso.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIngreso.Location = new System.Drawing.Point(24, 265);
+            this.txtIngreso.Location = new System.Drawing.Point(23, 265);
             this.txtIngreso.Name = "txtIngreso";
             this.txtIngreso.Size = new System.Drawing.Size(162, 26);
             this.txtIngreso.TabIndex = 4;
@@ -470,7 +461,7 @@
             this.checkAbonar.AutoSize = true;
             this.checkAbonar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkAbonar.Font = new System.Drawing.Font("Bahnschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkAbonar.Location = new System.Drawing.Point(45, 322);
+            this.checkAbonar.Location = new System.Drawing.Point(44, 322);
             this.checkAbonar.Name = "checkAbonar";
             this.checkAbonar.Size = new System.Drawing.Size(107, 33);
             this.checkAbonar.TabIndex = 2;
@@ -481,6 +472,16 @@
             // mostradorErrores
             // 
             this.mostradorErrores.ContainerControl = this;
+            // 
+            // lblPatente
+            // 
+            this.lblPatente.AutoSize = true;
+            this.lblPatente.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPatente.Location = new System.Drawing.Point(21, 121);
+            this.lblPatente.Name = "lblPatente";
+            this.lblPatente.Size = new System.Drawing.Size(59, 18);
+            this.lblPatente.TabIndex = 2;
+            this.lblPatente.Text = "Patente";
             // 
             // frmIngresosEdicion
             // 
@@ -507,9 +508,9 @@
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.lblEstacionamiento);
-            this.Controls.Add(this.lblPatente);
             this.Controls.Add(this.cmboxModelo);
             this.Controls.Add(this.cmboxTarifa);
+            this.Controls.Add(this.lblPatente);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblModelo);
             this.Controls.Add(this.lblTarifa);
@@ -542,7 +543,6 @@
         private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Label Vehiculo;
         private System.Windows.Forms.ComboBox cmboxTipoVehiculo;
-        private System.Windows.Forms.Label lblPatente;
         private System.Windows.Forms.TextBox txtPatente;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Panel pnlClientes;
@@ -575,5 +575,6 @@
         private System.Windows.Forms.CheckBox checkAbonar;
         private System.Windows.Forms.ErrorProvider mostradorErrores;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Label lblPatente;
     }
 }

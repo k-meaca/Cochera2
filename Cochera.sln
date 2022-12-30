@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cochera.Entidades", "Cocher
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cochera.Datos", "Cochera.Datos\Cochera.Datos.csproj", "{95A34DAC-9D84-4F6D-970D-D56A1795FEC3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Script", "Script", "{E6928559-8713-4FB5-B75D-EF8C1A910490}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\Usuario\Desktop\ScriptCochera.sql = C:\Users\Usuario\Desktop\ScriptCochera.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

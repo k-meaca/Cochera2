@@ -38,6 +38,7 @@ namespace Cochera.Windows
         private IGeneradorIngresos generadorIngresos;
 
         private IIngreso ingreso;
+
         #endregion
 
         //------------CONSTRUCTOR------------//
@@ -352,6 +353,25 @@ namespace Cochera.Windows
             {
                 mostradorErrores.SetError(txtPatente, "Debe ingresar una patente.");
             }
+            else
+            {
+                string tipo = cmboxTipoVehiculo.SelectedItem.ToString();
+
+                if (!tipo.Contains("Moto"))
+                {
+                    valido = Validador.ValidarPatenteAuto(txtPatente.Text);
+                }
+                else
+                {
+                    valido = Validador.ValidarPatenteMoto(txtPatente.Text);
+                }
+
+                if (!valido)
+                {
+                    mostradorErrores.SetError(txtPatente, "El formato de la patente no es valido");
+                }
+                
+            }
 
             return valido;
         }
@@ -383,6 +403,7 @@ namespace Cochera.Windows
 
         //----PUBLICOS----//
 
+        #region
         public void ActivarBotones()
         {
             this.Enabled = true;
@@ -399,6 +420,8 @@ namespace Cochera.Windows
         {
 
         }
+
+        #endregion
 
         //------------EVENTOS------------//
 
@@ -539,5 +562,7 @@ namespace Cochera.Windows
         {
             generadorIngresos.ActivarBotones();
         }
+
+        //----RADIO BUTTONS----//
     }
 }
